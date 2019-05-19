@@ -1,5 +1,6 @@
 package com.cleitondsd.etec.quizetecv1;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
+
+    public static final String EXTRA_SCORE = "extrascore";
 
 
     private TextView textViewQuestion;
@@ -37,6 +40,8 @@ public class QuizActivity extends AppCompatActivity {
 
     private int score;
     private boolean answered;
+
+    private long backPressedTime;
 
 
     @Override
@@ -147,8 +152,20 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(EXTRA_SCORE, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 
+    @Override
+    public void onBackPressed() {
 
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            finishQuiz();
+        } else {
+            Toast.makeText(this, "Pressione 'voltar' novamente para sair ", Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis();
+    }
 }
