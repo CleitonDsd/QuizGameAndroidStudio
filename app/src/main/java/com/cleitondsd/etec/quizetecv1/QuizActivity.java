@@ -1,12 +1,17 @@
 package com.cleitondsd.etec.quizetecv1;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Collections;
 import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
@@ -22,7 +27,16 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton rb3;
     private Button buttonConfirmNext;
 
+    private ColorStateList textColorDefaultRb;
+
     private List<Question> questionList;
+
+    private int questionCounter;
+    private int questionCountTotal;
+    private Question currentQuestion;
+
+    private int score;
+    private boolean answered;
 
 
     @Override
@@ -40,9 +54,101 @@ public class QuizActivity extends AppCompatActivity {
         rb3 = findViewById(R.id.radio_button3);
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
 
+        textColorDefaultRb = rb1.getTextColors();
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
+        questionCountTotal = questionList.size();
+        Collections.shuffle(questionList);
+
+        showNextQuestion();
+
+        buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!answered) {
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
+                        checkAnswer();
+                    } else {
+                        Toast.makeText(QuizActivity.this, "Selecione uma resposta!", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    showNextQuestion();
+                }
+            }
+        });
+    }
+
+    private void showNextQuestion() {
+        rb1.setTextColor(textColorDefaultRb);
+        rb2.setTextColor(textColorDefaultRb);
+        rb3.setTextColor(textColorDefaultRb);
+        rbGroup.clearCheck();
+
+
+        if (questionCounter < questionCountTotal) {
+            currentQuestion = questionList.get(questionCounter);
+
+
+            textViewQuestion.setText(currentQuestion.getQuestao());
+
+            rb1.setText(currentQuestion.getOpcao1());
+            rb2.setText(currentQuestion.getOpcao2());
+            rb3.setText(currentQuestion.getOpcao3());
+
+            questionCounter++;
+            textViewQuestionCount.setText("Questão: " + questionCounter + "/" + questionCountTotal);
+            answered = false;
+            buttonConfirmNext.setText("Confirmar");
+        } else {
+            finishQuiz();
+        }
 
     }
+
+    private void checkAnswer() {
+        answered = true;
+
+        RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
+
+        if (answerNr == currentQuestion.getNumeroResposta()) {
+            score++;
+            textViewScore.setText("Score: " + score);
+        }
+        showSolution();
+
+    }
+
+    private void showSolution() {
+        rb1.setTextColor(Color.RED);
+        rb2.setTextColor(Color.RED);
+        rb3.setTextColor(Color.RED);
+
+        switch (currentQuestion.getNumeroResposta()) {
+            case 1:
+                rb1.setTextColor(Color.GREEN);
+                textViewQuestion.setText("Resposta número 1 é a correta");
+                break;
+            case 2:
+                rb2.setTextColor(Color.GREEN);
+                textViewQuestion.setText("Resposta número 2 é a correta");
+                break;
+            case 3:
+                rb3.setTextColor(Color.GREEN);
+                textViewQuestion.setText("Resposta número 3 é a correta");
+                break;
+        }
+        if (questionCounter < questionCountTotal) {
+            buttonConfirmNext.setText("Próximo");
+        } else {
+            buttonConfirmNext.setText("Finalizar");
+        }
+    }
+
+    private void finishQuiz() {
+        finish();
+    }
+
+
 }
