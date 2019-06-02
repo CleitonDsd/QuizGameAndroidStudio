@@ -28,17 +28,18 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
 
         final String SQL_CREATE_QUESTIONS_TABLE = "CREATE TABLE " +
-                QuizContract.QuestionTable.TABLE_NAME + " ( " +
+                QuestionTable.TABLE_NAME + " ( " +
                 QuestionTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 QuestionTable.COLUMN_QUESTION + " TEXT, " +
                 QuestionTable.COLUMN_OPTION1 + " TEXT, " +
                 QuestionTable.COLUMN_OPTION2 + " TEXT, " +
                 QuestionTable.COLUMN_OPTION3 + " TEXT, " +
-                QuestionTable.COLUMN_ANSWER_NR + " INTEGER " +
+                QuestionTable.COLUMN_ANSWER_NR + " INTEGER, " +
+                QuestionTable.COLUMN_DIFFICULTY + " TEXT" +
                 ")";
 
         db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
-        fillQuestionTable();
+        fillQuestionsTable();
     }
 
     @Override
@@ -47,33 +48,36 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    private void fillQuestionTable() {
-        Question q1 = new Question("A é a correta ", "A", "B", "C", 1);
+    private void fillQuestionsTable() {
+        Question q1 = new Question("Fácil: A é a correta",
+                "A", "B", "C", 1, Question.DIFFICULTY_EASY);
         addQuestion(q1);
-
-        Question q2 = new Question("B é a correta ", "A", "B", "C", 2);
+        Question q2 = new Question("Médio: B é a correta",
+                "A", "B", "C", 2, Question.DIFFICULTY_MEDIUM);
         addQuestion(q2);
-
-        Question q3 = new Question("B é a correta novamente ", "A", "B", "C", 2);
+        Question q3 = new Question("Médio: C é a correta",
+                "A", "B", "C", 3, Question.DIFFICULTY_MEDIUM);
         addQuestion(q3);
-
-        Question q4 = new Question("C é a correta ", "A", "B", "C", 3);
+        Question q4 = new Question("Difícil: A é a correta",
+                "A", "B", "C", 1, Question.DIFFICULTY_HARD);
         addQuestion(q4);
-
-        Question q5 = new Question("A é a correta novamente ", "A", "B", "C", 1);
+        Question q5 = new Question("Difícil: B é a correta",
+                "A", "B", "C", 2, Question.DIFFICULTY_HARD);
         addQuestion(q5);
-
-        Question q6 = new Question("C é a correta novamente", "A", "B", "C", 3);
+        Question q6 = new Question("Difícil: C é a correta",
+                "A", "B", "C", 3, Question.DIFFICULTY_HARD);
         addQuestion(q6);
+
     }
 
     private void addQuestion(Question question) {
-         ContentValues cv = new ContentValues();
+        ContentValues cv = new ContentValues();
         cv.put(QuestionTable.COLUMN_QUESTION, question.getQuestao());
         cv.put(QuestionTable.COLUMN_OPTION1, question.getOpcao1());
         cv.put(QuestionTable.COLUMN_OPTION2, question.getOpcao2());
         cv.put(QuestionTable.COLUMN_OPTION3, question.getOpcao3());
         cv.put(QuestionTable.COLUMN_ANSWER_NR, question.getNumeroResposta());
+        cv.put(QuestionTable.COLUMN_DIFFICULTY, question.getDifficulty());
 
         db.insert(QuestionTable.TABLE_NAME, null, cv);
     }
@@ -92,6 +96,33 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 question.setOpcao2(c.getString(c.getColumnIndex(QuestionTable.COLUMN_OPTION2)));
                 question.setOpcao3(c.getString(c.getColumnIndex(QuestionTable.COLUMN_OPTION3)));
                 question.setNumeroResposta(c.getInt(c.getColumnIndex(QuestionTable.COLUMN_ANSWER_NR)));
+                question.setDifficulty(c.getString(c.getColumnIndex(QuestionTable.COLUMN_DIFFICULTY)));
+
+                questionList.add(question);
+            } while (c.moveToNext());
+        }
+        c.close();
+        return questionList;
+    }
+
+    public ArrayList<Question> getQuestions(String difficulty) {
+        ArrayList<Question> questionList = new ArrayList<>();
+
+        db = getReadableDatabase();
+
+        String[] selectionArgs = new String[]{difficulty};
+        Cursor c = db.rawQuery("SELECT * FROM " + QuestionTable.TABLE_NAME +
+                " WHERE " + QuestionTable.COLUMN_DIFFICULTY + " = ?", selectionArgs);
+
+        if (c.moveToFirst()) {
+            do {
+                Question question = new Question();
+                question.setQuestao(c.getString(c.getColumnIndex(QuestionTable.COLUMN_QUESTION)));
+                question.setOpcao1(c.getString(c.getColumnIndex(QuestionTable.COLUMN_OPTION1)));
+                question.setOpcao2(c.getString(c.getColumnIndex(QuestionTable.COLUMN_OPTION2)));
+                question.setOpcao3(c.getString(c.getColumnIndex(QuestionTable.COLUMN_OPTION3)));
+                question.setNumeroResposta(c.getInt(c.getColumnIndex(QuestionTable.COLUMN_ANSWER_NR)));
+                question.setDifficulty(c.getString(c.getColumnIndex(QuestionTable.COLUMN_DIFFICULTY)));
                 questionList.add(question);
             } while (c.moveToNext());
         }
