@@ -27,6 +27,15 @@
         android:freezesText="true"/>
 
     <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_question_count"
+        android:text="Dificuldade: "
+        android:textColor="@color/black"
+        android:freezesText="true"/>
+
+    <TextView
         android:id="@+id/text_view_countdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
