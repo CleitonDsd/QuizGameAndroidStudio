@@ -34,6 +34,7 @@ public class StartingScreenActivity extends AppCompatActivity {
         textViewHighscore = findViewById(R.id.text_view_highscore);
         spinnerDifficulty = findViewById(R.id.spinner_difficulty);
 
+
         String[] difficultyLevels = Question.getAllDifficultyLevels();
 
         ArrayAdapter<String> adapterDifficulty = new ArrayAdapter<String>(this,
