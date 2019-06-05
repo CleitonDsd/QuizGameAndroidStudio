@@ -31,4 +31,10 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    @androidx.annotation.NonNull
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
