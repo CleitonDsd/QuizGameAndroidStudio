@@ -11,15 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6836be2b-4212-4394-8ab5-e826e0a0b16e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizDbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizDbHelper.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +70,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="java" value="9147" />
+          <entry key="java" value="9652" />
           <entry key="xml" value="1437" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9147" />
+          <entry key="JAVA" value="9652" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="XML" value="1437" />
         </counts>
@@ -123,17 +115,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1717">
-              <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+            <state relative-caret-position="510">
+              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2052#2053#0" expanded="true" />
                 <element signature="e#2077#2078#0" expanded="true" />
                 <element signature="e#2110#2111#0" expanded="true" />
                 <element signature="e#2138#2139#0" expanded="true" />
+                <element signature="e#3096#3097#0" expanded="true" />
                 <element signature="e#3129#3130#0" expanded="true" />
                 <element signature="e#3178#3179#0" expanded="true" />
                 <element signature="e#3222#3223#0" expanded="true" />
@@ -142,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizDbHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2414">
-              <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+            <state relative-caret-position="425">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,6 +161,9 @@
       <find>Médio</find>
       <find>spinner_difficulty</find>
       <find>spinner</find>
+      <find>add</find>
+      <find>addQ</find>
+      <find>addQuestion</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -494,13 +490,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32968238" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32968238" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.30120483" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.30120483" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Find" order="10" />
@@ -601,16 +597,6 @@
     <entry file="file://$USER_HOME$/OneDrive/Documentos/AndroidStudio/DeviceExplorer/Pixel_2_XL_API_26 [emulator-5554]/data/data/com.cleitondsd.etec.quizetecv1/databases/QuizEtec.db">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizDbHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizContract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -620,17 +606,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+        <state relative-caret-position="510">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2052#2053#0" expanded="true" />
             <element signature="e#2077#2078#0" expanded="true" />
             <element signature="e#2110#2111#0" expanded="true" />
             <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#3096#3097#0" expanded="true" />
             <element signature="e#3129#3130#0" expanded="true" />
             <element signature="e#3178#3179#0" expanded="true" />
             <element signature="e#3222#3223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cleitondsd/etec/quizetecv1/QuizDbHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
