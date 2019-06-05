@@ -7,6 +7,12 @@ public final class QuizContract {
     private QuizContract() {
     }
 
+    public static class CategoriesTable implements BaseColumns {
+
+        public static final String TABLE_NAME = "quiz_categories";
+        public static final String COLUMN_NAME = "name";
+    }
+
     public static class QuestionTable implements BaseColumns {
 
         public static final String TABLE_NAME = "quiz_questions";
@@ -16,6 +22,7 @@ public final class QuizContract {
         public static final String COLUMN_OPTION3 = "opcao3";
         public static final String COLUMN_ANSWER_NR = "numeroResposta";
         public static final String COLUMN_DIFFICULTY = "dificuldade";
+        public static final String COLUMN_CATEGORY_ID = "category_id";
 
     }
 }
