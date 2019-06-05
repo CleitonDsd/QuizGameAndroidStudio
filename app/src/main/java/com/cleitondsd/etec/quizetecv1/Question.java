@@ -10,43 +10,50 @@ public class Question implements Parcelable {
     public static final String DIFFICULTY_MEDIUM = "Medium";
     public static final String DIFFICULTY_HARD = "Hard";
 
+    private int id;
     private String questao;
     private String opcao1, opcao2, opcao3;
     private int numeroResposta;
     private String difficulty;
+    private int categoryID;
 
     public Question() {
     }
 
-    public Question(String questao, String opcao1, String opcao2,
-                    String opcao3, int numeroResposta, String difficulty) {
+    public Question(String questao, String opcao1, String opcao2, String opcao3,
+                    int numeroResposta, String difficulty, int categoryID) {
         this.questao = questao;
         this.opcao1 = opcao1;
         this.opcao2 = opcao2;
         this.opcao3 = opcao3;
         this.numeroResposta = numeroResposta;
         this.difficulty = difficulty;
+        this.categoryID = categoryID;
     }
 
     //Get e Set
 
     protected Question(Parcel in) {
+        id = in.readInt();
         questao = in.readString();
         opcao1 = in.readString();
         opcao2 = in.readString();
         opcao3 = in.readString();
         numeroResposta = in.readInt();
         difficulty = in.readString();
+        categoryID = in.readInt();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
         dest.writeString(questao);
         dest.writeString(opcao1);
         dest.writeString(opcao2);
         dest.writeString(opcao3);
         dest.writeInt(numeroResposta);
         dest.writeString(difficulty);
+        dest.writeInt(categoryID);
     }
 
     @Override
@@ -65,6 +72,14 @@ public class Question implements Parcelable {
             return new Question[size];
         }
     };
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getQuestao() {
         return questao;
@@ -114,7 +129,15 @@ public class Question implements Parcelable {
         this.difficulty = difficulty;
     }
 
-    public static String [] getAllDifficultyLevels(){
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public static String[] getAllDifficultyLevels() {
 
         return new String[]{
                 DIFFICULTY_EASY,
