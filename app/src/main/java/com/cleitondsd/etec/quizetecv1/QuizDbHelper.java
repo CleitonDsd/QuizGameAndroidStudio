@@ -98,35 +98,146 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("Lógica de Programação, Fácil: A é a correta",
-                "A", "B", "C", 1,
-                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        //Java | Fácil
+
+        Question q1 = new Question("O que é necessário para o desenvolvimento na linguagem Java?",
+                "JDK, JRE e IDE", "JDK e JRE", "KFC, BK e Mc", 1,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q1);
 
-        Question q2 = new Question("Java, Médio: B é a correta",
-                "A", "B", "C", 2,
-                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        Question q2 = new Question("Quando foi lançada a primeira versão do Java?",
+                "1997", "1995", "1996", 3,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q2);
 
-        Question q3 = new Question("SQL, Difícil: C é a correta",
-                "A", "B", "C", 3,
-                Question.DIFFICULTY_HARD, Category.SQL);
+        Question q3 = new Question("Os programas feitos em Java são compilados em um formato própio, denomina-se:",
+                "ByteCode", "BitCode", "JavaC", 1,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q3);
 
-        Question q4 = new Question("Lógica de Programação, Difícil: C é a correta",
-                "A", "B", "C", 3,
-                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        Question q4 = new Question("O que a JVM faz?",
+                "Java Virtual Machine", "Reponsável por Versionar o Java", "Interpreta os ByteCodes e transforma em código nativo",
+                3,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q4);
 
-        Question q5 = new Question("SQL, Médio: B é a correta",
-                "A", "B", "C", 2,
-                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        Question q5 = new Question("Qual é o operador a seguir: \n <condicao> ? <expressao_true> : <expressao_false>",
+                "Operador de Desvio de Fluxo", "Operador Ternario", "Operador Binário", 2,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q5);
 
-        Question q6 = new Question("Java, Difícil: A é a correta",
-                "A", "B", "C", 1,
-                Question.DIFFICULTY_HARD, Category.JAVA);
+        Question q6 = new Question("Como são chamadas as intruções de um programa em Java?",
+                "TDD", "Cognátas", "Diretivas", 1,
+                Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q6);
+
+        Question q7 = new Question("Quais são os Tipos de Estruturas de Controle: ",
+                "Simples, Composta e Condicional", "If, While e For", "Repetição Simples, Repetição Condicional e Desvio de Fluxo", 3,
+                Question.DIFFICULTY_EASY, Category.JAVA);
+        addQuestion(q7);
+
+        Question q8 = new Question("Como é feito um vetor em Java?",
+                "tipoVariavel [] nomeVariavel = new tipoVariavel [tamanho]", "nomeVariavel [] tipoVariavel = new tipoVariavel [tamanho]", "tipoVariavel nomeVariavel [][] = new tipoVariavel [tamanho][tamanho]", 1,
+                Question.DIFFICULTY_EASY, Category.JAVA);
+        addQuestion(q8);
+
+        Question q9 = new Question("O que é uma Classe em Java?",
+                "Um objeto definido por um Construtor através de uma classe FINAL", "Modelo definido para um tipo de Objeto", "Cópia Identica de Todos os Atributos, inclusive o nome de outra Classe", 2,
+                Question.DIFFICULTY_EASY, Category.JAVA);
+        addQuestion(q9);
+
+        Question q10 = new Question("API 3.1 Classe (Java.lang.String) \n o que faz a classe 'String trim()':",
+                "Cria uma String que não pode ser alterada", "Faz a verificação do tamanho da String", "Obtém uma nova String sem espaços em Branco", 3,
+                Question.DIFFICULTY_EASY, Category.JAVA);
+        addQuestion(q10);
+
+        //Java | Médio
+
+        Question q11 = new Question("Para que serve '@override' ?",
+                "Confirma que os argumentos são seguros", "Indica que o metódo anotado sobrepõe o outro", "Indica que o metódo anotado sobreescreve o outro", 2,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q11);
+        Question q12 = new Question("O que fazem as Exceções(Exception)?",
+                "Indica que o parametro é excepcional", "Indicam uma exceção livre", "Indicam a ocorrência de erros", 3,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q12);
+        Question q13 = new Question("'throw new RuntimeException('mensagem'); Indica:",
+                "Uma exceção não monitorada ", "Uma exceção monitorada  ", "Indica uma exceção livre em quanto executa o projeto", 1,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q13);
+        Question q14 = new Question("Para que Serve um pacote?",
+                "Separam os projetos para que não de erro no JavaC", "Separar os Construtores em posições diferentes ", "Separa as classes conforme seu propósito ", 3,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q14);
+        Question q15 = new Question("O que é uma Interface em Java",
+                "Definição de um modelo semântico para outras classes", "É um componente visual do JavaFX ", "Parte Gráfica do Projeto ", 1,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q15);
+        Question q16 = new Question("Para que serve a interface Deque<E>?",
+                "Define o tipo de Exceção<E> ", "Define filas especiais(double ended queues)", "Define construtores especiais(int new equals) ", 2,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q16);
+        Question q17 = new Question("CompareTo, é usado para: ",
+                "Compara o objeto com o argumento dado", "Compara a variavel com o metodo dado ", "Compara o tipo de variáveis ", 2,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q17);
+        Question q18 = new Question("public static int numero 0; É: ",
+                "Uma variável membro estática ", "Uma variável final de valor 0 ", "Uma variável membro protegida ", 1,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q18);
+        Question q19 = new Question("Porque o método main(String[]) é estático?",
+                "Método Main não é editável", "Porque é uma Classe protegida", "Para que a JVM não realize a instanciação de objetos", 3,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q19);
+        Question q20 = new Question("O que faz 'System.gc();' ?",
+                "Aciona o coletor de lixos", "Denomina o Garbage Colector (GC)", "Remove objetos usados", 1,
+                Question.DIFFICULTY_MEDIUM, Category.JAVA);
+        addQuestion(q20);
+
+        //Java | Dificil
+
+        Question q21 = new Question("Para que server a Classe DataOutPutStream ?",
+                "Permite a saída de dados de tipos primitivos", "Permite a produção de dados formatados para exibição ", "Retorna o número de bytes no Stream", 1,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q21);
+        Question q22 = new Question("Statement stmt = con.createStatement(); \n O que faz?",
+                "Lê um estado da classe Swing", "Permite o envio de comando estáticos(SQL)", "Cria um Estado", 2,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q22);
+        Question q23 = new Question("static INetAddres getLocalHost(); ",
+                "Retorna o endereço IP do host como um objeto InetAddres", "Retorna o endereço IP do host como um objeto Multicas ", "Retorna o endereço Multicas do host como um objeto InetAddres ", 1,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q23);
+        Question q24 = new Question("ServerSocket servidor = new ServerSocket(1234);",
+                "Interage o objeto servidor com o sockete do AWT", "Cria um soquete utilizada no servidor com 4 posições", "Cria um servidor e usa a porta 1234", 3,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q24);
+        Question q25 = new Question("Datagram Sockets, são suportados por quais Protocolos?",
+                "HTTP/HTTPS", "UDP/IP", "IP/HTTPS", 2,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q25);
+        Question q26 = new Question("Provê a infrastrutura de uma coleção imutável: ",
+                "HashSet<E>", "AbstractListCollection<E> ", "AbstractCollection<E> ", 3,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q26);
+        Question q27 = new Question("Date, Stringm File... São tipos de classes:",
+                "Lexicográfica", "Wrappers", "Comparable<C> ", 1,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q27);
+        Question q28 = new Question("A classe Jframe: ",
+                "É derivada do JComponent", "É um JComponent", "Não é derivada do JComponent", 3,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q28);
+        Question q29 = new Question("Organiza os componentes numa Grade Layout:",
+                "GRID Layout", "TabeLess", "Java AWT Tables", 1,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q29);
+        Question q30 = new Question("Contém metodos para criacaçõ de visões e estrutura de dados, como streams, destinadas a construtores de biblioteca: ",
+                "@SuppressWarnings", "Collectors", "StreamSupport ", 1,
+                Question.DIFFICULTY_HARD, Category.JAVA);
+        addQuestion(q30);
+
+
     }
 
     private void addQuestion(Question question) {
