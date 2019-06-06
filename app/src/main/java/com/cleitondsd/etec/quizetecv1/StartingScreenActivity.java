@@ -37,7 +37,7 @@ public class StartingScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_starting_screen);
 
         textViewHighscore = findViewById(R.id.text_view_highscore);
-        spinnerCategory = findViewById(R.id.spinner_difficulty);
+        spinnerCategory = findViewById(R.id.spinner_category);
         spinnerDifficulty = findViewById(R.id.spinner_difficulty);
 
 
@@ -95,6 +95,12 @@ public class StartingScreenActivity extends AppCompatActivity {
 
     private void loadDifficultyLevels() {
         String[] difficultyLevels = Question.getAllDifficultyLevels();
+
+        ArrayAdapter<String> adapterDifficulty = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, difficultyLevels);
+        adapterDifficulty.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDifficulty.setAdapter(adapterDifficulty);
+
     }
 
     private void loadHighscore() {
