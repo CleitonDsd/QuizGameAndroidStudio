@@ -220,7 +220,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "HashSet<E>", "AbstractListCollection<E> ", "AbstractCollection<E> ", 3,
                 Question.DIFFICULTY_HARD, Category.JAVA);
         addQuestion(q26);
-        Question q27 = new Question("Date, Stringm File... São tipos de classes:",
+        Question q27 = new Question("Date, String, File... São tipos de classes:",
                 "Lexicográfica", "Wrappers", "Comparable<C> ", 1,
                 Question.DIFFICULTY_HARD, Category.JAVA);
         addQuestion(q27);
@@ -237,6 +237,144 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_HARD, Category.JAVA);
         addQuestion(q30);
 
+        //Lógica de programação fácil
+
+        Question q31 = new Question("Conjunto das regras e procedimentos lógicos",
+                "Logaritmo", "Algoritmo", "Algarismo", 2,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q31);
+        Question q32 = new Question("O que é uma variável? ",
+                "Uma posição localizada no endereço de memória", "Uma posição de uma função", "conjunto das regras e procedimentos lógicos", 1,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q32);
+        Question q33 = new Question("um método padronizado para comunicar instruções para um computador.",
+                "Assembly", "Conjunto de Logaritmos", "Linguagem de Programação", 3,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q33);
+        Question q34 = new Question("linguagem de programação que segue as características da arquitetura do computador: ",
+                "C", "C++", "C#", 1,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q34);
+        Question q35 = new Question("longe do código de máquina e mais próximo à linguagem humana.",
+                "Java", "Linguagens de Alto Nível", "Kotlin", 2,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q35);
+        Question q36 = new Question("O VisuAlg prevê quatro tipos de dados:",
+                "Verdadeiros, Falsos e Lógicos", "int, boolean, String e double", "inteiro, real, cadeia de caracteres e lógico ", 3,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q36);
+        Question q37 = new Question("É uma forma de escrever algoritmo: ",
+                "Pseudocódigo ", "Linguagem de programação", "Assembly", 1,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q37);
+        Question q38 = new Question("Definição de IDE: ",
+                "Ambiente Superficial de Desenvolvimento", "Ambiente Integral de Desenvolvimento", "Ambiente Parcial de Desenvolvimento", 2,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q38);
+        Question q39 = new Question("18.5 é a variável de um tipo: ",
+                "real", "inteiro", "boolean", 1,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q39);
+        Question q40 = new Question("Selecione a IDE: ",
+                "Sublime Text3", "Visual Studio Code", "Eclipse", 3,
+                Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
+        addQuestion(q40);
+
+        //Lógica de programação médio
+
+        Question q41 = new Question("Conjunto ordenado de dados do mesmo tipo",
+                "Variáveis", "Constraint", "Vetor", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q41);
+        Question q42 = new Question("O que é uma subrotina: ",
+                "Uma classe com poucos métodos", "Função", "Listas de sub itens de uma classe", 2,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q42);
+        Question q43 = new Question("Valor proveniente de uma variável: ",
+                "Ponteiro Nulo", "Subrotina", "Parametro", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q43);
+        Question q44 = new Question("Argumento é: ",
+                "é o valor que você passa para a função", " é a variável que irá receber um valor em uma função", "Comentário no código", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q44);
+        Question q45 = new Question("Paramêtro é: ",
+                "Passagem de valor ou referência sem referências", "é o valor que você passa para a função", " é a variável que irá receber um valor em uma função", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q45);
+        Question q46 = new Question("Procedimentos em Visualg: ",
+                "é uma subrotina que não retorna nenhum valor ", "é um parametro que não retorna nenhum valor ", "é um subprograma que não retorna nenhum valor ", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q46);
+        Question q47 = new Question("Processo de encontrar e reduzir defeitos: ",
+                "Debug", "Bug", "AntiDebugger", 1,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q47);
+        Question q48 = new Question("Estruturas de dados do tipo LIFO (last-in first-out): ",
+                "EverStack Pilha", "Stack", "Spack", 2,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q48);
+        Question q49 = new Question("Ramo da computação que estuda os diversos mecanismos de organização de dados: ",
+                "Estrutura de Dados", "Machine Learning", "Ciência de Dados", 1,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q49);
+        Question q50 = new Question("Tipo de diagrama: ",
+                "UML", "Pilha fluxocardiograma", "Fluxograma", 3,
+                Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
+        addQuestion(q50);
+
+        //Lógica de programação difícil
+
+        Question q51 = new Question(" computador só entende linguagem de 0's e 1's. \nNesse sentido, é importante conhecer como fazer a conversão de um número da base decimal para um número na base binária. \nO número 87, se escrito na base binária, equivale a:",
+                "1111 0111", "0101 0101", "0101 0111", 3,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q51);
+        Question q52 = new Question("Para a determinação da parte decimal de um número real, pode-se utilizar a função INT(x), como no exemplo a seguir, onde INT(x) retorna a parte inteira de x.\n" +
+                "\n" +
+                "x = 3.1415926; \n" +
+                "escreva x-INT(x)",
+                "Correto", "Falso", "X = 4.6569", 1,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q52);
+        Question q53 = new Question(" Por exemplo, um comando if com a expressão  if not (A and B) pode ser reescrito, para quaisquer valores lógicos de A e B, com a expressão:",
+                "A or B", "not A or not B", "not (not A or not B)", 2,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q53);
+        Question q54 = new Question("Observe a expressão lógica abaixo: \n" +
+              "((((true AND true) OR false) AND true) AND (true OR (true AND false))) \n" +
+                "Considerando os operadores lógicos AND (e) e OR (ou), e os operandos lógicos true (verdadeiro) e false (falso),\n" +
+                "é CORRETO afirmar que o valor lógico dessa expressão é:  ",
+                "verdadeiro.", "falso", "indefinido", 1,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q54);
+        Question q55 = new Question("Dizemos que a fórmula G é uma forma normal disjuntiva da fórmula F,\n" +
+                "quando F e G são logicamente equivalentes e,além disso, G é uma disjunção de fórmulas, as quais são conjunções,\n" +
+                "cujos termos são todas as proposições atômicas,com eventuais negações, que aparecem em F. Nessas condições, sendo p, q e r proposições\n" +
+                " atômicas, uma forma normal disjuntiva para a fórmula\n" +
+                " F = (p → q) ∧(q → r) é G = X1 ∨ X2 ∨ X3 ∨ X4, onde, dentre as fórmulas X1, X2, X3 e X4, não figura:  ",
+                "(¬p) ∧ (¬q) ∧ (¬r).", "(¬p) ∧ (¬q) ∧ r", " p ∧ q ∧ (¬r).", 3,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q55);
+        Question q56 = new Question("Em se tratando de linguagens procedimentais, os dados são globais e, portanto, acessíveis a todos os procedimentos.",
+                "Sim, Somente em Assembly", "Errada", "Certo", 2,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q56);
+        Question q57 = new Question("Utilizando-se linguagens fracamente tipadas, é possível alterar o tipo de dado contido em uma variável durante a execução do programa.",
+                "Correta", "Errado", "Somente em Java", 1,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q57);
+        Question q58 = new Question("Considerando A = 10, B = 7 e C = 6, assinale a opção correta relacionada à lógica de programação.",
+                " ((A + C) < (B * 2) OR (C + B * 3) < (A * 3))", "(C * 3) <= (3 + C * 2)", "(B * 4) >= (A + A * 2) AND (5 + 5) >= (A))", 1,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q58);
+        Question q59 = new Question("Sobre proposições lógicas, assinale a alternativa correta.",
+                "Se A = F e B = F, então (A → B) = F", "Se A = V e B = F, então (B → A) = V", "Se A = F e B = V, então (A → B) ∧ (B → A) = V", 2,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q59);
+        Question q60 = new Question("Qual das expressões lógicas abaixo NÃO pode ser usada para determinar se um dado mês do ano tem 31 dias? ",
+                "MES=1 OR MES=3 OR MES=5 OR MES=7 OR MES=8 AND MES=10 AND MES=12", "NOT(MES=4 OR MES=6 OR MES=9 OR MES=11 OR MES=2)", "NOT(MES=4 AND MES=6 AND MES=9 AND MES=11 AND MES=2)", 3,
+                Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
+        addQuestion(q60);
 
     }
 
