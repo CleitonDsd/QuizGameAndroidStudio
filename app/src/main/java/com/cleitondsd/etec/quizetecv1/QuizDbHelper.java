@@ -81,7 +81,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     private void fillCategoriesTable() {
 
-        Category c1 = new Category("Lógica de Programação");
+        Category c1 = new Category("LÓGICA");
         addCategory(c1);
         Category c2 = new Category("JAVA");
         addCategory(c2);
