@@ -10,13 +10,14 @@
     android:padding="16dp"
     tools:context=".StartingScreenActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Quiz Tecnologia"
         android:fontFamily="casual"
+        android:text="Quiz Tecnologia"
         android:textColor="@android:color/black"
         android:textSize="35sp" />
 
@@ -27,8 +28,8 @@
         android:layout_above="@+id/button_start_quiz"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
-        android:text="HighScore: 0"
         android:fontFamily="casual"
+        android:text="HighScore: 0"
         android:textSize="20sp" />
 
 
@@ -45,32 +46,32 @@
         android:id="@+id/spinner_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button_start_quiz"
         android:layout_below="@+id/button_start_quiz"
+        android:layout_alignStart="@+id/button_start_quiz"
+        android:layout_alignLeft="@+id/button_start_quiz"
         android:layout_marginTop="16dp"
-        android:fontFamily="cursive"
-        android:layout_alignLeft="@+id/button_start_quiz" />
+        android:fontFamily="cursive" />
 
     <Spinner
         android:id="@+id/spinner_difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button_start_quiz"
         android:layout_below="@+id/spinner_category"
-        android:fontFamily="cursive"
+        android:layout_alignStart="@+id/button_start_quiz"
         android:layout_alignLeft="@+id/button_start_quiz"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive" />
     ==
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner_difficulty"
-        android:layout_marginTop="179dp"
-        android:fontFamily="cursive"
-        android:text="Cleiton Dsd'"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="powered by Cleiton Dsd'"
         android:textColor="@android:color/black"
-        android:textSize="25sp" />\
+        android:textSize="15sp" />\
 
 </RelativeLayout>

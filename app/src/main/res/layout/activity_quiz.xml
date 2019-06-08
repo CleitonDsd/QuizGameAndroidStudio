@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score: 0"
+        android:fontFamily="monospace"
         android:textColor="@color/black"
         android:freezesText="true"/>
 
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_score"
         android:text="Questão: 1/x"
+        android:fontFamily="monospace"
         android:textColor="@color/black"
         android:freezesText="true"/>
 
@@ -32,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_question_count"
         android:text="Categoria: "
+        android:fontFamily="monospace"
         android:textColor="@color/black"
         android:freezesText="true"/>
 
@@ -41,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_category"
         android:text="Dificuldade: "
+        android:fontFamily="monospace"
         android:textColor="@color/black"
         android:freezesText="true"/>
 
@@ -51,6 +55,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="00:30"
+        android:fontFamily="sans-serif-condensed"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:freezesText="true"/>
@@ -61,23 +66,24 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/radio_group"
         android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:freezesText="true"
         android:text="Aqui vamos escolher uma questão"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:freezesText="true"/>
+        android:textSize="20sp" />
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true">
-
         <RadioButton
             android:id="@+id/radio_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Opção 1"
+            android:fontFamily="sans-serif"
             android:freezesText="true"/>
 
         <RadioButton
@@ -104,6 +110,18 @@
         android:layout_below="@+id/radio_group"
         android:layout_marginTop="16dp"
         android:text="Confirmar"
+        android:fontFamily="sans-serif-black"
         android:freezesText="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_confirm_next"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="powered by Cleiton Dsd'"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />\
 
 </RelativeLayout>
