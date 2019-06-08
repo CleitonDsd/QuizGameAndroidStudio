@@ -340,14 +340,16 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "A or B", "not A or not B", "not (not A or not B)", 2,
                 Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
         addQuestion(q53);
-        Question q54 = new Question("Observe a expressão lógica abaixo: \n" +
-              "((((true AND true) OR false) AND true) AND (true OR (true AND false))) \n" +
+        Question q54 = new Question("((((true AND true) OR false) AND true) AND (true OR (true AND false))) \n" +
                 "Considerando os operadores lógicos AND (e) e OR (ou), e os operandos lógicos true (verdadeiro) e false (falso),\n" +
                 "é CORRETO afirmar que o valor lógico dessa expressão é:  ",
                 "verdadeiro.", "falso", "indefinido", 1,
                 Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
         addQuestion(q54);
-        Question q55 = new Question("Dizemos que a fórmula G é uma forma normal disjuntiva da fórmula F,\n" +
+        Question q55 = new Question("\n" +
+                "\n" +
+                "\n" +
+                "Fórmula G é uma forma normal disjuntiva da fórmula F,\n" +
                 "quando F e G são logicamente equivalentes e,além disso, G é uma disjunção de fórmulas, as quais são conjunções,\n" +
                 "cujos termos são todas as proposições atômicas,com eventuais negações, que aparecem em F. Nessas condições, sendo p, q e r proposições\n" +
                 " atômicas, uma forma normal disjuntiva para a fórmula\n" +
