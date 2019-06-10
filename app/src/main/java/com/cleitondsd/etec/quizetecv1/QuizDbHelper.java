@@ -110,7 +110,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q2);
 
-        Question q3 = new Question("Os programas feitos em Java são compilados em um formato própio, denomina-se:",
+        Question q3 = new Question("Os programas feitos em Java são compilados em um formato própio, denominado de:",
                 "ByteCode", "BitCode", "JavaC", 1,
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q3);
@@ -127,11 +127,11 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q5);
 
         Question q6 = new Question("Como são chamadas as intruções de um programa em Java?",
-                "TDD", "Cognátas", "Diretivas", 1,
+                "TDD", "Cognatas", "Diretivas", 1,
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q6);
 
-        Question q7 = new Question("Quais são os Tipos de Estruturas de Controle: ",
+        Question q7 = new Question("Quais são os tipos de estruturas de controle: ",
                 "Simples, Composta e Condicional", "If, While e For", "Repetição Simples, Repetição Condicional e Desvio de Fluxo", 3,
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q7);
@@ -146,7 +146,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q9);
 
-        Question q10 = new Question("API 3.1 Classe (Java.lang.String) \n o que faz a classe 'String trim()':",
+        Question q10 = new Question("API 3.1 Classe (Java.lang.String) \n O que faz a classe 'String trim()':",
                 "Cria uma String que não pode ser alterada", "Faz a verificação do tamanho da String", "Obtém uma nova String sem espaços em Branco", 3,
                 Question.DIFFICULTY_EASY, Category.JAVA);
         addQuestion(q10);
@@ -165,7 +165,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Uma exceção não monitorada ", "Uma exceção monitorada  ", "Indica uma exceção livre em quanto executa o projeto", 1,
                 Question.DIFFICULTY_MEDIUM, Category.JAVA);
         addQuestion(q13);
-        Question q14 = new Question("Para que Serve um pacote?",
+        Question q14 = new Question("Para que Serve um pacote(OO)?",
                 "Separam os projetos para que não de erro no JavaC", "Separar os Construtores em posições diferentes ", "Separa as classes conforme seu propósito ", 3,
                 Question.DIFFICULTY_MEDIUM, Category.JAVA);
         addQuestion(q14);
@@ -174,11 +174,11 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_MEDIUM, Category.JAVA);
         addQuestion(q15);
         Question q16 = new Question("Para que serve a interface Deque<E>?",
-                "Define o tipo de Exceção<E> ", "Define filas especiais(double ended queues)", "Define construtores especiais(int new equals) ", 2,
+                "Define o tipo de Exceção<E> ", "Define filas especiais(double, ended, queues)", "Define construtores especiais(int new equals) ", 2,
                 Question.DIFFICULTY_MEDIUM, Category.JAVA);
         addQuestion(q16);
         Question q17 = new Question("CompareTo, é usado para: ",
-                "Compara o objeto com o argumento dado", "Compara a variavel com o metodo dado ", "Compara o tipo de variáveis ", 2,
+                "Compara o objeto com o argumento dado", "Compara a variável com o metodo dado ", "Compara o tipo de variáveis ", 2,
                 Question.DIFFICULTY_MEDIUM, Category.JAVA);
         addQuestion(q17);
         Question q18 = new Question("public static int numero 0; É: ",
@@ -247,15 +247,15 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Uma posição localizada no endereço de memória", "Uma posição de uma função", "conjunto das regras e procedimentos lógicos", 1,
                 Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
         addQuestion(q32);
-        Question q33 = new Question("um método padronizado para comunicar instruções para um computador.",
+        Question q33 = new Question("Um método padronizado para comunicar instruções para um computador.",
                 "Assembly", "Conjunto de Logaritmos", "Linguagem de Programação", 3,
                 Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
         addQuestion(q33);
-        Question q34 = new Question("linguagem de programação que segue as características da arquitetura do computador: ",
+        Question q34 = new Question("Linguagem de programação que segue as características da arquitetura do computador: ",
                 "C", "C++", "C#", 1,
                 Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
         addQuestion(q34);
-        Question q35 = new Question("longe do código de máquina e mais próximo à linguagem humana.",
+        Question q35 = new Question("Longe do código de máquina e mais próximo à linguagem humana.",
                 "Java", "Linguagens de Alto Nível", "Kotlin", 2,
                 Question.DIFFICULTY_EASY, Category.PROGRAMMING_LOGIC);
         addQuestion(q35);
@@ -282,7 +282,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
         //Lógica de programação médio
 
-        Question q41 = new Question("Conjunto ordenado de dados do mesmo tipo",
+        Question q41 = new Question("Conjunto ordenado de dados do mesmo tipo: ",
                 "Variáveis", "Constraint", "Vetor", 3,
                 Question.DIFFICULTY_MEDIUM, Category.PROGRAMMING_LOGIC);
         addQuestion(q41);
@@ -374,9 +374,172 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
         addQuestion(q59);
         Question q60 = new Question("Qual das expressões lógicas abaixo NÃO pode ser usada para determinar se um dado mês do ano tem 31 dias? ",
-                "MES=1 OR MES=3 OR MES=5 OR MES=7 OR MES=8 AND MES=10 AND MES=12", "NOT(MES=4 OR MES=6 OR MES=9 OR MES=11 OR MES=2)", "NOT(MES=4 AND MES=6 AND MES=9 AND MES=11 AND MES=2)", 3,
+                "MES=1 OR MES=3 OR MES=5 OR MES=7 OR MES=8 AND MES=10 AND MES=12",
+                "NOT(MES=4 OR MES=6 OR MES=9 OR MES=11 OR MES=2)",
+                "NOT(MES=4 AND MES=6 AND MES=9 AND MES=11 AND MES=2)", 3,
                 Question.DIFFICULTY_HARD, Category.PROGRAMMING_LOGIC);
         addQuestion(q60);
+
+        //SQL Fácil
+
+        Question q61 = new Question("Qual a definição palavra SQL:",
+                "Smart Query Language.", "Structured Query Logical.", "Structured Query Language.", 3, Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q61);
+        Question q62 = new Question("SGBD é um sistema: ",
+                "Gerenciador de Banco de Dados.", "Sistema desenvolvido sem Banco de Dados.", "Sistema ERP NoSQL.", 1,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q62);
+        Question q63 = new Question("Exemplo de SGBDR",
+                "Redis.", "Access.", "MongoDB.", 2,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q63);
+        Question q64 = new Question("Banco de dados: ",
+                "Grupo de diretivas.", "É um conjunto de arquivos estáticos.", "São coleções organizadas de dados que se relacionam.", 3,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q64);
+        Question q65 = new Question("Algo de interesse para a comunidade de usuários do banco de dados: ",
+                "Conjunto-Resultado.", "Múltiplas pesquisas focando na UI.", "Entidade.", 3,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q65);
+        Question q66 = new Question("Registros no banco de dados, podem ser denominados de: ",
+                "Fuplas.", "Tuplas.", "Colunas.", 2,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q66);
+        Question q67 = new Question("O formato AAAA-MM-DD, é feito por qual tipo de dado: ",
+                "Date.", "DateTime.", "TimeStamp.", 1,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q67);
+        Question q68 = new Question("Identificador único de cada linha em uma tabela",
+                "Chave Primária", "Id", "Código.", 1,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q68);
+        Question q69 = new Question("CRUD, o que é?'",
+                "Create, Read, Updata e Delete.", "Create, Read, Update e Delete.", "Create, Read, Updata e Drop.", 2,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q69);
+        Question q70 = new Question("Qual SGBD mais utilizado no mundo?",
+                "SQL Server.", "MySQL.", "Oracle Database.", 3,
+                Question.DIFFICULTY_EASY, Category.SQL);
+        addQuestion(q70);
+
+        //SQL Médio
+
+        Question q71 = new Question("Quais são os comandos em SQL",
+                "DDL, DML, DCL e TCL, DQL", "DDL, DML, DCL e DTL", "DDL, DML, DCL e TCL", 1,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q71);
+        Question q72 = new Question("Qual o código SQL que retorna como resultado os registros entre as tabelas GRU e CGH " +
+                "\nque têm a mesma informação no campo Nome, e ainda os registros na tabela CGH" +
+                "\nque não tem nome igual na tabela GRU?",
+                " ", " ", " ", 1,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q72);
+        Question q73 = new Question("Qual o código SQL contém comandos do tipo DDL?",
+                "Select * into questoes from questoesmodelo.", "Delete from questoes.", "Insert into questoes select * from questoesmodelo.", 3,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q73);
+        Question q74 = new Question("A Linguagem de Consulta Estruturada (SQL) fornece uma gama de tipos de dados que podem ser " +
+                "\nutilizados para definir a forma com que informações serão armazenadas no banco de dados.",
+
+                "VARCHAR (tamanho): sequência de caracteres de tamanho variável. " +
+                        "\nOs espaços não ocupados pelo texto não são armazenados, são ignorados," +
+                        "com capacidade para armazenar de 1 a 255 caracteres.",
+                "CHAR (tamanho): sequência de caracteres de tamanho fixo. Os espaços não ocupados pelo texto são armazenados, com capacidade de 1 a 128 caracteres.",
+                "DATETIME: permite o armazenamento apenas de hora.", 1,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q74);
+        Question q75 = new Question("Essa linguagem(SQL) é dividida em quatro conjuntos, sendo eles linguagens:",
+                "Para controle de acesso a dados, para transações, orientada a objetos e de estruturação.",
+                "Manipulação de dados, de definição de dados, para controle de transações e para controle de acesso a dados.",
+                "Estruturação, de dados, para argumentação de controles e orientada a objetos.", 2,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q75);
+        Question q76 = new Question("Pseudocolunas são colunas que não fazem parte da tabela, mas que têm características de colunas. No PL/SQL, pode-se utilizar as seguintes pseudocolunas, EXCETO:",
+
+                "ROWNUM - Número da linha selecionada em uma tabela. Não é afetada pela cláusula ORDER BY.",
+                "COLNUM – Número da coluna selecionada em uma tabela. Não é afetada pela cláusula ORDER BY.",
+                "CURRVAL - Valor corrente de uma sequência armazenada no banco de dados.", 2,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q76);
+        Question q77 = new Question("SELECT C.NOME, SUM(E.SALARIO) " +
+                "\nFROM ENFERMEIRO E, CLINICA C " +
+                "\nWHERE E.COD_CLI = C.DOD_CLI " +
+                "\nGROUP BY C.NOME;" +
+                "\nQuantao ao código acima, assinale a alternativa correta: ",
+
+                "A função SUM não pode ser utilizada em uma instrução SQL que contenha a cláusula SELECT.",
+                "A consulta tem por finalidade mostrar o nome do enfermeiro, de cada clínica, que possui o maior salário.",
+                "A consulta tem por finalidade mostrar o custo total, pago em salários aos enfermeiros, por clínica.", 3,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q77);
+        Question q78 = new Question("O comando SQL para extrair uma informação de um banco de dados é:",
+                "Select.", "Import.", "Extract.", 1,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q78);
+        Question q79 = new Question("Acerca de banco de dados, julgue os itens seguintes. NoSQL são bancos de dados que não aceitam expressões SQL e devem ser armazenados na nuvem.",
+                "Com exceção do NOMySQL", "Certo", "Errado", 3,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q79);
+        Question q80 = new Question("“Essa função do SQL funciona como uma expressão CASE, onde são testados os valores diferentes de NULL. " +
+                "\nDesse modo, o primeiro valor que for diferente de NULL será retornado por tal função.” Assinale-a:",
+                "NULLIF.", "EXCEPT DISTINCT.", "INTERSECT.", 2,
+                Question.DIFFICULTY_MEDIUM, Category.SQL);
+        addQuestion(q80);
+
+        //SQL Difícl
+
+        Question q81 = new Question("instruções SQL que são enviadas ao banco de dados por um invasor SOS sistema com a finalidade de provocar algum dano.",
+                "STRING_SANITIZE", "GROUP BY", "SQL Injection", 3,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q81);
+        Question q82 = new Question("Com relação à linguagem de consulta estruturada (SQL), marque a única alternativa INCORRETA.",
+                "Entre os componentes SQL, aquele que permite aos usuários criar novos componentes com índices e tabelas é chamado de DDL (Data Definition Language).",
+                "Create user, Grant, Revoke, são exemplos de controle de autorizações de dados e licenças de usuários provenientes do componente DCL (Data Control Language).",
+                "A DML (Data Manipulation Language) permite a manipulação de dados armazenados em um banco de dados, exemplo: alter, insert, update e delete.", 3,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q82);
+        Question q83 = new Question("A respeito dos conceitos e comandos SQL SERVER e DB2 e dos bancos de dados textuais, julgue os itens de 85 a 89. O comando CREATE VIEW não está disponível para SQL Server, versão 2005.",
+                "Certo", "Somente no MongouMan", "Errado", 3,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q83);
+        Question q84 = new Question("Qual o comando com a cláusula WHERE, dentre os abaixo, que está correto?",
+                "WHERE COMM IS NULL", "WHERE COMM = 'NULL'", "WHERE COMM NULL", 2,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q84);
+        Question q85 = new Question("Qual é o comando com a cláusula WHERE abaixo que está correto?",
+                "WHERE SALARY BETWEEN 10000 AND 14000", "WHERE SALARY BETWEEN 14000 AND 10000", "WHERE SALARY BETWEEN (14000 AND 10000", 1,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q85);
+        Question q86 = new Question("Qual o comando com a cláusula SELECT, dentre os abaixo, que está correto?",
+                "SELECT (JOB, DEPT) FROM Q.STAFF", "SELECT JOB | DEPT FROM Q.STAF", "SELECT JOB, CONCAT (DEPT) FROM Q.STAFF", 1,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q86);
+        Question q87 = new Question("Qual a Query, dentre as abaixo, que está correta?",
+                "SELECT * FROM Q.STAFF FOR CURSOR ONLY\n" +
+                        "\nORDER BY JOB" +
+                        "\nWHERE SALARY > 15,000",
+
+                "SELECT * FROM Q.STAFF WHERE SALARY < 15000" +
+                        "\nORDER BY JOB" +
+                        "\nFOR FETCH ONLY\n",
+
+                "SELECT * FROM Q.STAFF WHERE SALARY > 15000" +
+                        "\nORDER BY JOB" +
+                        "\nFOR ACCESS ONLY", 2,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q87);
+        Question q88 = new Question("Qual a função do comando ROLLBACK?",
+                "Desfazer as alterações em caso de abend.", "Incluir os índices em uma tabela.", "Atualizar os dados em caso de abend.", 1,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q88);
+        Question q89 = new Question("O que é uma VIEW?",
+                "É uma visão física para atualizar uma tabela.", "É uma visão lógica ou máscara sobre uma ou mais tabelas.", "É uma visão lógica para acessar um arquivo.", 2,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q89);
+        Question q90 = new Question("Qual tipo de argumento lhe permite prover um número arbitrário de argumentos?",
+                "ByRef", "ParamArray", "Named", 2,
+                Question.DIFFICULTY_HARD, Category.SQL);
+        addQuestion(q90);
 
     }
 
